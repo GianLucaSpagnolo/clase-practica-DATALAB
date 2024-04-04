@@ -5,6 +5,7 @@
 */
 char **read_from_file(char *filename)
 {
+    // ESTO NO LO VOY A HACER
 	return 0;
 }
 
