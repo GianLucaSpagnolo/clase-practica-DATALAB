@@ -58,7 +58,7 @@ void numbers_test()
     // OTRAS REPRESENTACIONES DE NUMEROS: UNSIGNED INT
     uint32_t num4 = 0x00000003;
 
-    //printf("Numero 3 sin signo: %u\n", num4);
+    printf("Numero 3 sin signo: %u\n", num4);
     // Representacion binaria:
     // 0000 0000 0000 0000 0000 0000 0000 0011
 
