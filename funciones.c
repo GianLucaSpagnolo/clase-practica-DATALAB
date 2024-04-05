@@ -5,7 +5,7 @@
 */
 char **read_from_file(char *filename)
 {
-	char **lines = malloc(sizeof(char *) * 5);
+	char **lines = malloc(sizeof(char*) * 5);
 
 	FILE *file = fopen(filename, "r");
 	if (file == NULL) {
@@ -16,11 +16,12 @@ char **read_from_file(char *filename)
 	char buffer[100];
 	int i = 0;
 	while (fgets(buffer, sizeof(buffer), file) != NULL) {
-		lines[i] = malloc(sizeof(char) * strlen(buffer));
+		lines[i] = malloc(sizeof(char) * 100);
 		strcpy(lines[i], buffer);
 		i++;
 	}
 
+	fclose(file);
 	return lines;
 }
 
