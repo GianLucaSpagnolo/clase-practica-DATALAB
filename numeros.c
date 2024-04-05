@@ -272,7 +272,7 @@ void read_and_write_from_file(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	// PRUEBA LEER ARCHIVOS - MERGE DE RAMAS
-	//read_and_write_from_file(argc, argv);
+	read_and_write_from_file(argc, argv);
 
 	// PRUEBA DE NUMEROS - TIPOS DE DATOS
 	numbers_test();
