@@ -22,7 +22,7 @@ int sumBytePos(int x)
 // Calcula un circular shift de x en n bytes a la derecha si shift = 1, a la izquierda si shift = -1
 int circularShift(int x, int n, int shift)
 {
-    // x un int de 32 bits, 0<=n<=4 , shift = 1 derecha,  shift = -1 izquierda
+    // x un int de 32 bits, 0<n<4 , shift = 1 derecha,  shift = -1 izquierda
     // x= 0xFADEAAAA n=3, shift= 1 , -1  => res = 0xDEAAAAFA, res = 0xAAFADEAA
 
     // 0xFFFF FFFF => 0xFFF0 0000
