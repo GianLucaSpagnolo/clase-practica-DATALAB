@@ -47,6 +47,26 @@ int circularShift(int x, int n, int shift)
     return (shift_i & shift) | (shift_d & (~shift));
 }
 
+/*
+ * bitParity - returns 1 if x contains an odd number of 0's
+ *   Examples: bitParity(5) = 0, bitParity(7) = 1
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 20
+ *   Rating: 4
+ */
+int bitParity(int x) {
+    x = ~x; //Cambio problema a calcular cantidad impar de 1
+    //Comienzo a hacer folding de paridades los 32 bits 
+    //Cancelo todos los pares de 1 con XOr
+    x = x ^ (x >> 16);
+    x = x ^ (x >> 8);
+    x = x ^ (x >> 4);
+    x = x ^ (x >> 2);
+    x = x ^ (x >> 1);
+    return x & 1; //Finalmente veo si el último bit es 1 => IMPAR, 0 => PAR
+}
+   
+
 int main()
 {
     int x_sumbyte = 0x1B598412; // RESPUESTA: 10A
@@ -55,5 +75,7 @@ int main()
     int x_shift = 0x109AAA45; // 45109AAA, RESPUESTA: 9AAA4510
     printf("RES: %X\n", circularShift(x_shift, 3, 1));
 
+    //bitParity(5) = 0, bitParity(7) = 1
+    printf("bitparity(5): %X, bitparity(7): %X\n", bitParity(5), bitParity(7));
     return 0;
 }
