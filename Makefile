@@ -6,11 +6,9 @@ all: numeros funciones ejercicios
 # make numeros
 # ./numeros
 # para correr el programa de numeros.c
-numeros: numeros.c funciones.o
+numeros: numeros.c
 	$(CC) $(CFLAGS) $^ -o $@
 
-funciones.o: funciones.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
 # make ejercicios
 # ./ejercicios
