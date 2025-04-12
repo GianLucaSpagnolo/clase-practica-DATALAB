@@ -55,7 +55,7 @@ int circularShift(int x, int n, int shift)
  *   Rating: 4
  */
 int bitParity(int x) {
-    x = ~x; //Cambio problema a calcular cantidad impar de 1
+    //x = ~x; //Se puede cambiar el problema a "cantidad de 1s par" pero por propiedad es lo mismo
     //Comienzo a hacer folding de paridades los 32 bits 
     //Cancelo todos los pares de 1 con XOr
     x = x ^ (x >> 16);
